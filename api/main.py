@@ -1,12 +1,4 @@
 from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "FastAPIは正常に動いています！"}
-
-    from fastapi import FastAPI
 from pydantic import BaseModel
 import pickle
 import numpy as np
@@ -42,6 +34,5 @@ def predict_numbers(req: PredictionRequest):
         top6.sort()
 
         return {"predicted_numbers": top6.tolist()}
-
     except Exception as e:
         return {"error": str(e)}
