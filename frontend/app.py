@@ -19,7 +19,7 @@ if st.button("🎰 予測する"):
         else:
             # FastAPI にリクエスト送信
             response = requests.post(
-                "http://127.0.0.1:8000/predict",
+                "https://loto6-project.onrender.com/predict",
                 json={"last_numbers": numbers}
             )
             if response.status_code == 200:
